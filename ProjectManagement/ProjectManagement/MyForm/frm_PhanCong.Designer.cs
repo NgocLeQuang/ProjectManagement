@@ -155,7 +155,7 @@
             // 
             // gridColumn2
             // 
-            this.gridColumn2.Caption = "Vai trò";
+            this.gridColumn2.Caption = "Role";
             this.gridColumn2.FieldName = "IDRole";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.OptionsColumn.ReadOnly = true;
@@ -165,7 +165,7 @@
             // 
             // gridColumn3
             // 
-            this.gridColumn3.Caption = "FullName";
+            this.gridColumn3.Caption = "Full name";
             this.gridColumn3.FieldName = "FullName";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.ReadOnly = true;
@@ -181,7 +181,7 @@
             this.gridColumn4.AppearanceHeader.Options.UseTextOptions = true;
             this.gridColumn4.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn4.AppearanceHeader.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridColumn4.Caption = "Tham gia dự án";
+            this.gridColumn4.Caption = "Status";
             this.gridColumn4.ColumnEdit = this.checkBox_TrangThai;
             this.gridColumn4.FieldName = "TrangThai";
             this.gridColumn4.Name = "gridColumn4";
@@ -206,7 +206,7 @@
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(387, 538);
             this.groupControl1.TabIndex = 1;
-            this.groupControl1.Text = "Danh sách dự án";
+            this.groupControl1.Text = "List project";
             // 
             // panelControl2
             // 
@@ -261,7 +261,7 @@
             // 
             // gridColumn8
             // 
-            this.gridColumn8.Caption = "Thời gian bắt đầu";
+            this.gridColumn8.Caption = "Time starts";
             this.gridColumn8.FieldName = "fTimeStart";
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.Visible = true;
@@ -270,7 +270,7 @@
             // 
             // gridColumn9
             // 
-            this.gridColumn9.Caption = "Thời gian kết thúc";
+            this.gridColumn9.Caption = "End time";
             this.gridColumn9.FieldName = "fTimeEnd";
             this.gridColumn9.Name = "gridColumn9";
             this.gridColumn9.Visible = true;
@@ -282,7 +282,7 @@
             this.gridColumn10.AppearanceCell.Options.UseTextOptions = true;
             this.gridColumn10.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.gridColumn10.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.gridColumn10.Caption = "Thời gian báo Deadline";
+            this.gridColumn10.Caption = "Deadline notification time";
             this.gridColumn10.FieldName = "fDeadlineNotificationTime";
             this.gridColumn10.Name = "gridColumn10";
             this.gridColumn10.Visible = true;
@@ -317,7 +317,7 @@
             // 
             // gridColumn5
             // 
-            this.gridColumn5.Caption = "IDProject";
+            this.gridColumn5.Caption = "Project ID";
             this.gridColumn5.FieldName = "IDProject";
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
@@ -326,7 +326,7 @@
             // 
             // gridColumn6
             // 
-            this.gridColumn6.Caption = "Tên dự án";
+            this.gridColumn6.Caption = "Project name";
             this.gridColumn6.ColumnEdit = this.Popup_Deadline;
             this.gridColumn6.FieldName = "MoTaChucNangMoi";
             this.gridColumn6.Name = "gridColumn6";
@@ -352,7 +352,7 @@
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(692, 538);
             this.groupControl2.TabIndex = 2;
-            this.groupControl2.Text = "Danh sách User";
+            this.groupControl2.Text = "List user";
             // 
             // frm_PhanCong
             // 
@@ -362,7 +362,7 @@
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.groupControl1);
             this.Name = "frm_PhanCong";
-            this.Text = "Phân công dự án";
+            this.Text = "Assigning project";
             this.Load += new System.EventHandler(this.frm_PhanCong_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl_user)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_User)).EndInit();

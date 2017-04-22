@@ -25,7 +25,8 @@ namespace ProjectManagement.MyForm
             radioGroup1.Visible = false;
             if (!Global.db_BPO.DatabaseExists())
             {
-                MessageBox.Show("Không thể kết nối tới Server. Bạn vui lòng kiểm tra lại kết nối internet");
+                MessageBox.Show("Unable to connect to Server. Please check your internet connection");
+                //MessageBox.Show("Không thể kết nối tới Server. Bạn vui lòng kiểm tra lại kết nối internet");
             }
             else
             {
@@ -42,7 +43,7 @@ namespace ProjectManagement.MyForm
                 cbb_Batch.ItemIndex = 0;
             }
             
-            if (cbb_Batch.Text == "Không có batch")
+            if (cbb_Batch.Text == "No batch")
             {
                 btn_ChiTiet.Visible = false;
                 radioGroup1.Visible = false;
@@ -59,7 +60,8 @@ namespace ProjectManagement.MyForm
             {
                 if (!Global.db_BPO.DatabaseExists())
                 {
-                    MessageBox.Show("Không thể kết nối tới Server. Bạn vui lòng kiểm tra lại kết nối internet");
+                    MessageBox.Show("Unable to connect to Server. Please check your internet connection");
+                    //MessageBox.Show("Không thể kết nối tới Server. Bạn vui lòng kiểm tra lại kết nối internet");
                     return;
                 }
                 if (radioGroup1.Properties.Items[radioGroup1.SelectedIndex].Value == "DESO")
@@ -113,7 +115,7 @@ namespace ProjectManagement.MyForm
             var frm = new frm_ChiTietTienDo();
             frm.lb_fBatchName.Text = cbb_Batch.Text;
             frm.lb_duan.Text = cbb_project.Text;
-            frm.Text = "Chi tiết tiến độ " + loai;
+            frm.Text = "Progress details " + loai;
             frm.Loai = loai;
             frm.ShowDialog();
         }
@@ -127,7 +129,8 @@ namespace ProjectManagement.MyForm
         {
             if (!Global.db_BPO.DatabaseExists())
             {
-                MessageBox.Show("Không thể kết nối tới Server. Bạn vui lòng kiểm tra lại kết nối internet");
+                MessageBox.Show("Unable to connect to Server. Please check your internet connection");
+                //MessageBox.Show("Không thể kết nối tới Server. Bạn vui lòng kiểm tra lại kết nối internet");
                 return;
             }
             var fBatchName = (from w in Global.db_BPO.tbl_TienDos where w.IDProject == cbb_project.Text orderby w.id group w by w.fBatchName into g select new { fBatchName = g.Key }).ToList();

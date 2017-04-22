@@ -23,7 +23,7 @@ namespace ProjectManagement.MyForm
         {
             if (!Global.db_BPO.DatabaseExists())
             {
-                MessageBox.Show("Không thể kết nối tới Server. Bạn vui lòng kiểm tra lại kết nối internet");
+                MessageBox.Show("Unable to connect to Server. Please check your internet connection");
                 return;
             }
             Global.db_BPO.UpdateTimeLogout(Global.Strtoken);

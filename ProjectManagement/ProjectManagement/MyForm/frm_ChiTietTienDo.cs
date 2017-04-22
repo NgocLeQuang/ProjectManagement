@@ -23,7 +23,7 @@ namespace ProjectManagement.MyForm
         {
             if (!Global.db_BPO.DatabaseExists())
             {
-                MessageBox.Show("Không thể kết nối tới Server. Bạn vui lòng kiểm tra lại kết nối internet");
+                MessageBox.Show("Unable to connect to Server. Please check your internet connection");
                 return;
             }
             lb_TongSoHinh.Text =(from w in Global.db_BPO.tbl_TienDos where w.fBatchName == lb_fBatchName.Text && w.IDProject==lb_duan.Text select w.Idimage).Count().ToString();
@@ -95,7 +95,7 @@ namespace ProjectManagement.MyForm
         {
             if (!Global.db_BPO.DatabaseExists())
             {
-                MessageBox.Show("Không thể kết nối tới Server. Bạn vui lòng kiểm tra lại kết nối internet");
+                MessageBox.Show("Unable to connect to Server. Please check your internet connection");
                 return;
             }
             string idimage = gridView1.GetFocusedRowCellValue("idimage").ToString();

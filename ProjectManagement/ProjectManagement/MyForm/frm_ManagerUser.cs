@@ -32,7 +32,7 @@ namespace ProjectManagement.MyForm
         {
             if (!Global.db_BPO.DatabaseExists())
             {
-                MessageBox.Show("Không thể kết nối tới Server. Bạn vui lòng kiểm tra lại kết nối internet");
+                MessageBox.Show("Unable to connect to Server. Please check your internet connection");
                 return;
             }
             dgv_listuser.DataSource = null;
@@ -53,7 +53,7 @@ namespace ProjectManagement.MyForm
             }
             catch (Exception i)
             {
-                MessageBox.Show("Lỗi: " + i);
+                MessageBox.Show("Error: " + i);
             }
         }
 
@@ -63,7 +63,7 @@ namespace ProjectManagement.MyForm
             {
                 if (!Global.db_BPO.DatabaseExists())
                 {
-                    MessageBox.Show("Không thể kết nối tới Server. Bạn vui lòng kiểm tra lại kết nối internet");
+                    MessageBox.Show("Unable to connect to Server. Please check your internet connection");
                     return;
                 }
                 var token = (from w in Global.db_BPO.tbl_TokenLogins where w.Token==Global.StrUsername select w.Token).FirstOrDefault();
@@ -77,13 +77,12 @@ namespace ProjectManagement.MyForm
                         int r = Global.db_BPO.InsertUsername(txt_username.Text, txt_password.Text,txt_role.Text, txt_nhanvien.Text,txt_group.Text);
                         if (r == 0)
                         {
-                            //MessageBox.Show("UserName already exists, Please enter another UserName !");
-                            MessageBox.Show("UserName đã tồn tại, Vui lòng nhập tên User khác !");
+                            MessageBox.Show("UserName already exists, Please enter another UserName !");
+                            //MessageBox.Show("UserName đã tồn tại, Vui lòng nhập tên User khác !");
                         }
                         if (r == 1)
                         {
-                            //MessageBox.Show("Added UserName '" + txt_username.Text + "' !");
-                            MessageBox.Show("Đã thêm UserName '" + txt_username.Text + "' !");
+                            MessageBox.Show("Added UserName '" + txt_username.Text + "' !");
                             frm_ManagerUser_Load(sender, e);
                             txt_username.Text = "";
                             txt_nhanvien.Text = "";
@@ -94,19 +93,19 @@ namespace ProjectManagement.MyForm
                     else
                     {
                         MessageBox.Show("Enter the full information before saving!");
-                        MessageBox.Show("Vui lòng nhập đầy đủ thông tin trước khi lưu!");
+                        //MessageBox.Show("Vui lòng nhập đầy đủ thông tin trước khi lưu!");
                     }
                 }
                 else
                 {
-                    //MessageBox.Show("Your username is logged in on another PC, please log in again and repeat transactions!");
-                    MessageBox.Show("UserName của bạn đang đăng nhập ở máy tính khác, Vui lòng đăng nhập lại!");
+                   MessageBox.Show("Your username is logged in on another PC, please log in again and repeat transactions!");
+                    //MessageBox.Show("UserName của bạn đang đăng nhập ở máy tính khác, Vui lòng đăng nhập lại!");
                 }
             }
             catch (Exception i)
             {
-                //MessageBox.Show("Error: " + i);
-                MessageBox.Show("Lỗi: " + i);
+                MessageBox.Show("Error: " + i);
+                //MessageBox.Show("Lỗi: " + i);
             }
         }
 
@@ -116,7 +115,7 @@ namespace ProjectManagement.MyForm
             {
                 if (!Global.db_BPO.DatabaseExists())
                 {
-                    MessageBox.Show("Không thể kết nối tới Server. Bạn vui lòng kiểm tra lại kết nối internet");
+                    MessageBox.Show("Unable to connect to Server. Please check your internet connection");
                     return;
                 }
                 var token = (from w in Global.db_BPO.tbl_TokenLogins where w.Token == Global.StrUsername select w.Token).FirstOrDefault();
@@ -127,8 +126,8 @@ namespace ProjectManagement.MyForm
                     if (!string.IsNullOrEmpty(txt_nhanvien.Text) && !string.IsNullOrEmpty(txt_username.Text) &&
                         !string.IsNullOrEmpty(pass))
                     {
-                        //DialogResult thongbao =MessageBox.Show("You sure want to edit UserName information '" + txt_username.Text + "'","Notification", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                        DialogResult thongbao = MessageBox.Show("Bạn muốn sửa thông tin UserNamme '" + txt_username.Text + "' ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        DialogResult thongbao =MessageBox.Show("You sure want to edit UserName information '" + txt_username.Text + "'","Notification", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        //DialogResult thongbao = MessageBox.Show("Bạn muốn sửa thông tin UserNamme '" + txt_username.Text + "' ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                         if (thongbao == DialogResult.Yes)
                         {
                             //Global.db_BPO.UpdateUser(txt_username.Text, pass, null, txt_nhanvien.Text);
@@ -138,17 +137,17 @@ namespace ProjectManagement.MyForm
                     }
                     else
                     {
-                        MessageBox.Show("Vui lòng nhập đầy đủ thông tin trước khi lưu!");
+                        MessageBox.Show("Enter full information before saving !");
                     }
                 }
                 else
                 {
-                    MessageBox.Show("UserName của bạn đang đăng nhập ở máy tính khác, Vui lòng đăng nhập lại!");
+                    MessageBox.Show("Your UserName is logging in at another computer, please log in again!");
                 }
             }
             catch (Exception i)
             {
-                MessageBox.Show("Lỗi: " + i);
+                MessageBox.Show("Error: " + i);
             }
         }
         
@@ -158,12 +157,12 @@ namespace ProjectManagement.MyForm
             {
                 if (!Global.db_BPO.DatabaseExists())
                 {
-                    MessageBox.Show("Không thể kết nối tới Server. Bạn vui lòng kiểm tra lại kết nối internet");
+                    MessageBox.Show("Unable to connect to Server. Please check your internet connection");
                     return;
                 }
                 string username = gridView1.GetFocusedRowCellValue("Username") != null ? gridView1.GetFocusedRowCellValue("Username").ToString() : "";
-                //DialogResult thongbao = MessageBox.Show("You sure you want to delete UserName '" + username + "'", "Affirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                DialogResult thongbao = MessageBox.Show("Bạn muốn xóa thông tin UserName '" + username + "' ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                DialogResult thongbao = MessageBox.Show("You sure you want to delete UserName '" + username + "'", "Affirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                //DialogResult thongbao = MessageBox.Show("Bạn muốn xóa thông tin UserName '" + username + "' ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (thongbao == DialogResult.Yes)
                 {
                     if (!string.IsNullOrEmpty(username))
@@ -173,14 +172,14 @@ namespace ProjectManagement.MyForm
                     }
                     else
                     {
-                        //MessageBox.Show("Username does not exist, can't removed!");
-                        MessageBox.Show("Username không tồn tại!");
+                        MessageBox.Show("Username does not exist, can't removed!");
+                        //MessageBox.Show("Username không tồn tại!");
                     }
                 }
             }
             catch (Exception i)
             {
-                MessageBox.Show("Lỗi: " + i);
+                MessageBox.Show("Error: " + i);
             }
         }
     }

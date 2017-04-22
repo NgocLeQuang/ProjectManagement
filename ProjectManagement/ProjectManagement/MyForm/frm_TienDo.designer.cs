@@ -34,19 +34,19 @@
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.radioGroup1 = new DevExpress.XtraEditors.RadioGroup();
             this.btn_ChiTiet = new DevExpress.XtraEditors.SimpleButton();
+            this.cbb_project = new DevExpress.XtraEditors.LookUpEdit();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.cbb_Batch = new DevExpress.XtraEditors.LookUpEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.chartControl1 = new DevExpress.XtraCharts.ChartControl();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.cbb_project = new DevExpress.XtraEditors.LookUpEdit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbb_project.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbb_Batch.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(pieSeriesView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbb_project.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -84,8 +84,29 @@
             this.btn_ChiTiet.Name = "btn_ChiTiet";
             this.btn_ChiTiet.Size = new System.Drawing.Size(75, 23);
             this.btn_ChiTiet.TabIndex = 4;
-            this.btn_ChiTiet.Text = "Chi tiết";
+            this.btn_ChiTiet.Text = "Detail";
             this.btn_ChiTiet.Click += new System.EventHandler(this.btn_ChiTiet_Click);
+            // 
+            // cbb_project
+            // 
+            this.cbb_project.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cbb_project.Location = new System.Drawing.Point(61, 32);
+            this.cbb_project.Name = "cbb_project";
+            this.cbb_project.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbb_project.Properties.NullText = "No projects";
+            this.cbb_project.Size = new System.Drawing.Size(147, 20);
+            this.cbb_project.TabIndex = 1;
+            this.cbb_project.EditValueChanged += new System.EventHandler(this.cbb_project_EditValueChanged);
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.labelControl2.Location = new System.Drawing.Point(14, 35);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(41, 13);
+            this.labelControl2.TabIndex = 0;
+            this.labelControl2.Text = "Project :";
             // 
             // cbb_Batch
             // 
@@ -94,7 +115,7 @@
             this.cbb_Batch.Name = "cbb_Batch";
             this.cbb_Batch.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbb_Batch.Properties.NullText = "Không có batch";
+            this.cbb_Batch.Properties.NullText = "No batch";
             this.cbb_Batch.Size = new System.Drawing.Size(306, 20);
             this.cbb_Batch.TabIndex = 2;
             this.cbb_Batch.EditValueChanged += new System.EventHandler(this.cbb_Batch_EditValueChanged);
@@ -130,27 +151,6 @@
             this.chartControl1.Size = new System.Drawing.Size(1082, 596);
             this.chartControl1.TabIndex = 2;
             // 
-            // labelControl2
-            // 
-            this.labelControl2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.labelControl2.Location = new System.Drawing.Point(24, 36);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(33, 13);
-            this.labelControl2.TabIndex = 0;
-            this.labelControl2.Text = "Dự án:";
-            // 
-            // cbb_project
-            // 
-            this.cbb_project.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cbb_project.Location = new System.Drawing.Point(61, 32);
-            this.cbb_project.Name = "cbb_project";
-            this.cbb_project.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbb_project.Properties.NullText = "Không có dự án";
-            this.cbb_project.Size = new System.Drawing.Size(147, 20);
-            this.cbb_project.TabIndex = 1;
-            this.cbb_project.EditValueChanged += new System.EventHandler(this.cbb_project_EditValueChanged);
-            // 
             // frm_TienDo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -160,18 +160,18 @@
             this.Controls.Add(this.panelControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_TienDo";
-            this.Text = "Tiến độ";
+            this.Text = "Progress";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frm_TienDo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.radioGroup1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cbb_project.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbb_Batch.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(pieSeriesView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(series1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbb_project.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

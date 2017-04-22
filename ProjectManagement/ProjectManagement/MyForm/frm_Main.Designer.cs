@@ -41,6 +41,7 @@
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.btn_deadline = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.documentManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
             this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -48,7 +49,6 @@
             this.hideToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
@@ -71,7 +71,7 @@
             this.btn_deadline,
             this.barButtonItem1,
             this.barButtonItem2});
-            this.barManager1.MaxItemId = 7;
+            this.barManager1.MaxItemId = 8;
             // 
             // bar1
             // 
@@ -89,21 +89,21 @@
             // 
             // btn_quanly_user
             // 
-            this.btn_quanly_user.Caption = "Quản lý User";
+            this.btn_quanly_user.Caption = "Manage user";
             this.btn_quanly_user.Id = 0;
             this.btn_quanly_user.Name = "btn_quanly_user";
             this.btn_quanly_user.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_quanly_user_ItemClick);
             // 
             // btn_quanly_duan
             // 
-            this.btn_quanly_duan.Caption = "Quản lý Dự án";
+            this.btn_quanly_duan.Caption = "Manage project";
             this.btn_quanly_duan.Id = 1;
             this.btn_quanly_duan.Name = "btn_quanly_duan";
             this.btn_quanly_duan.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_quanly_duan_ItemClick);
             // 
             // btn_tiendo
             // 
-            this.btn_tiendo.Caption = "Quản lý tiến độ";
+            this.btn_tiendo.Caption = "Manage progress";
             this.btn_tiendo.Id = 2;
             this.btn_tiendo.Name = "btn_tiendo";
             this.btn_tiendo.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btn_tiendo_ItemClick);
@@ -151,6 +151,11 @@
             // 
             this.barButtonItem1.Id = 5;
             this.barButtonItem1.Name = "barButtonItem1";
+            // 
+            // barButtonItem2
+            // 
+            this.barButtonItem2.Id = 7;
+            this.barButtonItem2.Name = "barButtonItem2";
             // 
             // documentManager1
             // 
@@ -215,7 +220,7 @@
             this.KeyPreview = true;
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Quản lý Dự án";
+            this.Text = "Project Management";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_Main_FormClosing);
             this.Load += new System.EventHandler(this.FrmMain_Load);

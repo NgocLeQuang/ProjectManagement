@@ -93,51 +93,51 @@
             // 
             // labelControl6
             // 
-            this.labelControl6.Location = new System.Drawing.Point(392, 109);
+            this.labelControl6.Location = new System.Drawing.Point(401, 109);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(97, 13);
+            this.labelControl6.Size = new System.Drawing.Size(86, 13);
             this.labelControl6.TabIndex = 5;
-            this.labelControl6.Text = "Số hình hoàn thành:";
+            this.labelControl6.Text = "Image completed:";
             // 
             // labelControl5
             // 
-            this.labelControl5.Location = new System.Drawing.Point(392, 90);
+            this.labelControl5.Location = new System.Drawing.Point(399, 90);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(96, 13);
+            this.labelControl5.Size = new System.Drawing.Size(88, 13);
             this.labelControl5.TabIndex = 5;
-            this.labelControl5.Text = "Số hình đang check:";
+            this.labelControl5.Text = "Image is checking:";
             // 
             // labelControl4
             // 
-            this.labelControl4.Location = new System.Drawing.Point(399, 71);
+            this.labelControl4.Location = new System.Drawing.Point(369, 71);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(89, 13);
+            this.labelControl4.Size = new System.Drawing.Size(118, 13);
             this.labelControl4.TabIndex = 5;
-            this.labelControl4.Text = "Số hình chờ check:";
+            this.labelControl4.Text = "Image waiting for check:";
             // 
             // labelControl3
             // 
-            this.labelControl3.Location = new System.Drawing.Point(395, 52);
+            this.labelControl3.Location = new System.Drawing.Point(414, 52);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(93, 13);
+            this.labelControl3.Size = new System.Drawing.Size(73, 13);
             this.labelControl3.TabIndex = 5;
-            this.labelControl3.Text = "Số hình đang nhập:";
+            this.labelControl3.Text = "Image is doing:";
             // 
             // labelControl2
             // 
-            this.labelControl2.Location = new System.Drawing.Point(395, 33);
+            this.labelControl2.Location = new System.Drawing.Point(404, 33);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(93, 13);
+            this.labelControl2.Size = new System.Drawing.Size(83, 13);
             this.labelControl2.TabIndex = 5;
-            this.labelControl2.Text = "Số hình chưa nhập:";
+            this.labelControl2.Text = "Image remaining:";
             // 
             // labelControl1
             // 
             this.labelControl1.Location = new System.Drawing.Point(423, 12);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(65, 13);
+            this.labelControl1.Size = new System.Drawing.Size(64, 13);
             this.labelControl1.TabIndex = 5;
-            this.labelControl1.Text = "Tổng số hình:";
+            this.labelControl1.Text = "Total images:";
             // 
             // lb_SoHinhHoanThanh
             // 
@@ -213,17 +213,17 @@
             // 
             this.labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
             this.labelControl9.Appearance.Options.UseFont = true;
-            this.labelControl9.Location = new System.Drawing.Point(25, 39);
+            this.labelControl9.Location = new System.Drawing.Point(11, 40);
             this.labelControl9.Name = "labelControl9";
-            this.labelControl9.Size = new System.Drawing.Size(46, 17);
+            this.labelControl9.Size = new System.Drawing.Size(56, 16);
             this.labelControl9.TabIndex = 0;
-            this.labelControl9.Text = "Dự án:";
+            this.labelControl9.Text = "Project :";
             // 
             // labelControl7
             // 
             this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
             this.labelControl7.Appearance.Options.UseFont = true;
-            this.labelControl7.Location = new System.Drawing.Point(25, 61);
+            this.labelControl7.Location = new System.Drawing.Point(25, 62);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(42, 16);
             this.labelControl7.TabIndex = 0;
@@ -233,7 +233,7 @@
             // 
             this.lb_duan.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
             this.lb_duan.Appearance.Options.UseFont = true;
-            this.lb_duan.Location = new System.Drawing.Point(73, 40);
+            this.lb_duan.Location = new System.Drawing.Point(72, 40);
             this.lb_duan.Name = "lb_duan";
             this.lb_duan.Size = new System.Drawing.Size(33, 16);
             this.lb_duan.TabIndex = 0;
@@ -243,7 +243,7 @@
             // 
             this.lb_fBatchName.Appearance.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
             this.lb_fBatchName.Appearance.Options.UseFont = true;
-            this.lb_fBatchName.Location = new System.Drawing.Point(73, 62);
+            this.lb_fBatchName.Location = new System.Drawing.Point(72, 61);
             this.lb_fBatchName.Name = "lb_fBatchName";
             this.lb_fBatchName.Size = new System.Drawing.Size(37, 16);
             this.lb_fBatchName.TabIndex = 0;
@@ -276,7 +276,7 @@
             // 
             // gridColumn1
             // 
-            this.gridColumn1.Caption = "Tên hình";
+            this.gridColumn1.Caption = "Image name";
             this.gridColumn1.ColumnEdit = this.repositoryItemPopupContainerEdit1;
             this.gridColumn1.FieldName = "idimage";
             this.gridColumn1.Name = "gridColumn1";
@@ -325,7 +325,7 @@
             // 
             // gridColumn4
             // 
-            this.gridColumn4.Caption = "User nhập";
+            this.gridColumn4.Caption = "User performs";
             this.gridColumn4.FieldName = "UserName";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
@@ -343,7 +343,7 @@
             // 
             // gridColumn3
             // 
-            this.gridColumn3.Caption = "Thông tin";
+            this.gridColumn3.Caption = "Information";
             this.gridColumn3.FieldName = "ThongTin";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.OptionsColumn.ReadOnly = true;
@@ -361,7 +361,7 @@
             this.Controls.Add(this.panelControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_ChiTietTienDo";
-            this.Text = "Chi tiết tiến độ";
+            this.Text = "Progress details";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frm_ChiTietTienDo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
