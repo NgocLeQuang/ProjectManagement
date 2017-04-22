@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Windows.Forms;
 using DevExpress.UserSkins;
 using DevExpress.Skins;
@@ -18,13 +20,22 @@ namespace ProjectManagement
         [STAThread]
         private static void Main()
         {
+            FormCollection forms = Application.OpenForms;
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
             BonusSkins.Register();
             SkinManager.EnableFormSkins();
             UserLookAndFeel.Default.SetSkinStyle("DevExpress Style");
-            Application.Run(new FrmMain());//bool temp;
+            var processss = from proc in System.Diagnostics.Process.GetProcessesByName("ProjectManagement") orderby proc.ProcessName ascending select proc;
+
+            if (processss.Count() > 1)
+            {
+                MessageBox.Show("Chương trình này đã bật");
+                return;
+            }
+            Application.Run(new FrmMain());
+            //bool temp;
             //do
             //{
             //    temp = false;

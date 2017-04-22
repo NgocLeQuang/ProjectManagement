@@ -43,19 +43,17 @@
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.popupContainer_deadline_Batch = new DevExpress.XtraEditors.PopupContainerControl();
             this.gridControl2 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.dgv_batch = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridControl_duan = new DevExpress.XtraGrid.GridControl();
             this.dgv_Duan = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Popup_Deadline = new DevExpress.XtraEditors.Repository.RepositoryItemPopupContainerEdit();
-            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.btn_chitietdeadline = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl_user)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_User)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.popup_listduan)).BeginInit();
@@ -71,12 +69,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.popupContainer_deadline_Batch)).BeginInit();
             this.popupContainer_deadline_Batch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_batch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl_duan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Duan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Popup_Deadline)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
-            this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             this.SuspendLayout();
@@ -205,7 +201,6 @@
             // groupControl1
             // 
             this.groupControl1.Controls.Add(this.panelControl2);
-            this.groupControl1.Controls.Add(this.panelControl1);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupControl1.Location = new System.Drawing.Point(0, 0);
             this.groupControl1.Name = "groupControl1";
@@ -220,14 +215,14 @@
             this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelControl2.Location = new System.Drawing.Point(2, 20);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(383, 488);
+            this.panelControl2.Size = new System.Drawing.Size(383, 516);
             this.panelControl2.TabIndex = 2;
             // 
             // popupContainer_deadline_Batch
             // 
             this.popupContainer_deadline_Batch.Controls.Add(this.gridControl2);
             this.popupContainer_deadline_Batch.InvertTouchScroll = true;
-            this.popupContainer_deadline_Batch.Location = new System.Drawing.Point(10, 64);
+            this.popupContainer_deadline_Batch.Location = new System.Drawing.Point(19, 97);
             this.popupContainer_deadline_Batch.Name = "popupContainer_deadline_Batch";
             this.popupContainer_deadline_Batch.Size = new System.Drawing.Size(435, 173);
             this.popupContainer_deadline_Batch.TabIndex = 2;
@@ -236,106 +231,24 @@
             // 
             this.gridControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl2.Location = new System.Drawing.Point(0, 0);
-            this.gridControl2.MainView = this.gridView1;
+            this.gridControl2.MainView = this.dgv_batch;
             this.gridControl2.Name = "gridControl2";
             this.gridControl2.Size = new System.Drawing.Size(435, 173);
             this.gridControl2.TabIndex = 0;
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.dgv_batch});
             // 
-            // gridView1
+            // dgv_batch
             // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.dgv_batch.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn7,
             this.gridColumn8,
             this.gridColumn9,
             this.gridColumn10});
-            this.gridView1.GridControl = this.gridControl2;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsView.ColumnAutoWidth = false;
-            this.gridView1.OptionsView.ShowGroupPanel = false;
-            // 
-            // gridControl_duan
-            // 
-            this.gridControl_duan.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl_duan.Location = new System.Drawing.Point(2, 2);
-            this.gridControl_duan.MainView = this.dgv_Duan;
-            this.gridControl_duan.Name = "gridControl_duan";
-            this.gridControl_duan.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.Popup_Deadline});
-            this.gridControl_duan.Size = new System.Drawing.Size(379, 484);
-            this.gridControl_duan.TabIndex = 1;
-            this.gridControl_duan.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.dgv_Duan});
-            // 
-            // dgv_Duan
-            // 
-            this.dgv_Duan.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn5,
-            this.gridColumn6});
-            this.dgv_Duan.GridControl = this.gridControl_duan;
-            this.dgv_Duan.Name = "dgv_Duan";
-            this.dgv_Duan.OptionsView.ShowAutoFilterRow = true;
-            this.dgv_Duan.OptionsView.ShowGroupPanel = false;
-            this.dgv_Duan.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.dgv_Duan_RowCellClick);
-            this.dgv_Duan.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.dgv_Duan_CustomDrawRowIndicator);
-            // 
-            // gridColumn5
-            // 
-            this.gridColumn5.Caption = "IDProject";
-            this.gridColumn5.FieldName = "IDProject";
-            this.gridColumn5.Name = "gridColumn5";
-            this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 0;
-            this.gridColumn5.Width = 144;
-            // 
-            // gridColumn6
-            // 
-            this.gridColumn6.Caption = "Tên dự án";
-            this.gridColumn6.ColumnEdit = this.Popup_Deadline;
-            this.gridColumn6.FieldName = "MoTaChucNangMoi";
-            this.gridColumn6.Name = "gridColumn6";
-            this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 1;
-            this.gridColumn6.Width = 189;
-            // 
-            // Popup_Deadline
-            // 
-            this.Popup_Deadline.AutoHeight = false;
-            this.Popup_Deadline.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.Popup_Deadline.Name = "Popup_Deadline";
-            this.Popup_Deadline.PopupControl = this.popupContainer_deadline_Batch;
-            this.Popup_Deadline.Click += new System.EventHandler(this.Popup_Deadline_Batch_Click);
-            // 
-            // panelControl1
-            // 
-            this.panelControl1.Controls.Add(this.btn_chitietdeadline);
-            this.panelControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelControl1.Location = new System.Drawing.Point(2, 508);
-            this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(383, 28);
-            this.panelControl1.TabIndex = 1;
-            // 
-            // btn_chitietdeadline
-            // 
-            this.btn_chitietdeadline.Location = new System.Drawing.Point(290, 3);
-            this.btn_chitietdeadline.Name = "btn_chitietdeadline";
-            this.btn_chitietdeadline.Size = new System.Drawing.Size(88, 23);
-            this.btn_chitietdeadline.TabIndex = 0;
-            this.btn_chitietdeadline.Text = "Chi tiết Deadline";
-            this.btn_chitietdeadline.Click += new System.EventHandler(this.btn_chitietdeadline_Click);
-            // 
-            // groupControl2
-            // 
-            this.groupControl2.Controls.Add(this.popupContainerControl1);
-            this.groupControl2.Controls.Add(this.gridControl_user);
-            this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl2.Location = new System.Drawing.Point(387, 0);
-            this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(692, 538);
-            this.groupControl2.TabIndex = 2;
-            this.groupControl2.Text = "Danh sách User";
+            this.dgv_batch.GridControl = this.gridControl2;
+            this.dgv_batch.Name = "dgv_batch";
+            this.dgv_batch.OptionsView.ColumnAutoWidth = false;
+            this.dgv_batch.OptionsView.ShowGroupPanel = false;
             // 
             // gridColumn7
             // 
@@ -376,6 +289,71 @@
             this.gridColumn10.VisibleIndex = 3;
             this.gridColumn10.Width = 126;
             // 
+            // gridControl_duan
+            // 
+            this.gridControl_duan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl_duan.Location = new System.Drawing.Point(2, 2);
+            this.gridControl_duan.MainView = this.dgv_Duan;
+            this.gridControl_duan.Name = "gridControl_duan";
+            this.gridControl_duan.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.Popup_Deadline});
+            this.gridControl_duan.Size = new System.Drawing.Size(379, 512);
+            this.gridControl_duan.TabIndex = 1;
+            this.gridControl_duan.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.dgv_Duan});
+            // 
+            // dgv_Duan
+            // 
+            this.dgv_Duan.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn5,
+            this.gridColumn6});
+            this.dgv_Duan.GridControl = this.gridControl_duan;
+            this.dgv_Duan.Name = "dgv_Duan";
+            this.dgv_Duan.OptionsBehavior.EditorShowMode = DevExpress.Utils.EditorShowMode.Click;
+            this.dgv_Duan.OptionsView.ShowAutoFilterRow = true;
+            this.dgv_Duan.OptionsView.ShowGroupPanel = false;
+            this.dgv_Duan.RowCellClick += new DevExpress.XtraGrid.Views.Grid.RowCellClickEventHandler(this.dgv_Duan_RowCellClick);
+            this.dgv_Duan.CustomDrawRowIndicator += new DevExpress.XtraGrid.Views.Grid.RowIndicatorCustomDrawEventHandler(this.dgv_Duan_CustomDrawRowIndicator);
+            // 
+            // gridColumn5
+            // 
+            this.gridColumn5.Caption = "IDProject";
+            this.gridColumn5.FieldName = "IDProject";
+            this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.Visible = true;
+            this.gridColumn5.VisibleIndex = 0;
+            this.gridColumn5.Width = 144;
+            // 
+            // gridColumn6
+            // 
+            this.gridColumn6.Caption = "Tên dự án";
+            this.gridColumn6.ColumnEdit = this.Popup_Deadline;
+            this.gridColumn6.FieldName = "MoTaChucNangMoi";
+            this.gridColumn6.Name = "gridColumn6";
+            this.gridColumn6.Visible = true;
+            this.gridColumn6.VisibleIndex = 1;
+            this.gridColumn6.Width = 189;
+            // 
+            // Popup_Deadline
+            // 
+            this.Popup_Deadline.AutoHeight = false;
+            this.Popup_Deadline.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.Popup_Deadline.Name = "Popup_Deadline";
+            this.Popup_Deadline.PopupControl = this.popupContainer_deadline_Batch;
+            this.Popup_Deadline.Click += new System.EventHandler(this.Popup_Deadline_Batch_Click);
+            // 
+            // groupControl2
+            // 
+            this.groupControl2.Controls.Add(this.popupContainerControl1);
+            this.groupControl2.Controls.Add(this.gridControl_user);
+            this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupControl2.Location = new System.Drawing.Point(387, 0);
+            this.groupControl2.Name = "groupControl2";
+            this.groupControl2.Size = new System.Drawing.Size(692, 538);
+            this.groupControl2.TabIndex = 2;
+            this.groupControl2.Text = "Danh sách User";
+            // 
             // frm_PhanCong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -401,12 +379,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.popupContainer_deadline_Batch)).EndInit();
             this.popupContainer_deadline_Batch.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_batch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl_duan)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Duan)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Popup_Deadline)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
-            this.panelControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -428,11 +404,9 @@
         private DevExpress.XtraGrid.Views.Grid.GridView dgv_popup;
         private DevExpress.XtraEditors.PopupContainerControl popupContainerControl1;
         private DevExpress.XtraEditors.PanelControl panelControl2;
-        private DevExpress.XtraEditors.PanelControl panelControl1;
-        private DevExpress.XtraEditors.SimpleButton btn_chitietdeadline;
         private DevExpress.XtraEditors.PopupContainerControl popupContainer_deadline_Batch;
         private DevExpress.XtraGrid.GridControl gridControl2;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Views.Grid.GridView dgv_batch;
         private DevExpress.XtraGrid.GridControl gridControl_duan;
         private DevExpress.XtraGrid.Views.Grid.GridView dgv_Duan;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;

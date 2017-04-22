@@ -3,6 +3,7 @@
     internal class Global
     {
         public static Data_BPODataContext db_BPO = new Data_BPODataContext();
+        public static CheckInternetConnection ChkInternetConnection =new CheckInternetConnection();
         public static string StrMachine = "";
         public static string StrUserWindow = "";
         public static string StrIpAddress = "";

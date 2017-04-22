@@ -30,19 +30,23 @@ namespace ProjectManagement.MyForm
 
         private void frm_ManagerUser_Load(object sender, EventArgs e)
         {
+            if (!Global.db_BPO.DatabaseExists())
+            {
+                MessageBox.Show("Không thể kết nối tới Server. Bạn vui lòng kiểm tra lại kết nối internet");
+                return;
+            }
             dgv_listuser.DataSource = null;
             dgv_listuser.DataSource = Global.db_BPO.GetListUser();
             txt_role.DataSource = Global.db_BPO.tbl_Roles;
             txt_role.DisplayMember = "RoleName";
             txt_role.ValueMember = "RoleID";
         }
-       
-        private void gridView1_RowCellDefaultAlignment(object sender, DevExpress.XtraGrid.Views.Base.RowCellAlignmentEventArgs e)
+       private void gridView1_RowCellDefaultAlignment(object sender, DevExpress.XtraGrid.Views.Base.RowCellAlignmentEventArgs e)
         {
             try
             {
                 txt_username.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Username") != null? gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Username").ToString(): "";
-                txt_password.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Password") != null? gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Password").ToString(): "";
+                //txt_password.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Password") != null? gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Password").ToString(): "";
                 txt_nhanvien.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "FullName") != null? gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "FullName").ToString(): "";
                 txt_role.SelectedValue = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "IDRole") != null? gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "IDRole").ToString(): "";
                 txt_group.Text = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Group_Level") != null? gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "Group_Level").ToString(): "";
@@ -57,6 +61,11 @@ namespace ProjectManagement.MyForm
         {
             try
             {
+                if (!Global.db_BPO.DatabaseExists())
+                {
+                    MessageBox.Show("Không thể kết nối tới Server. Bạn vui lòng kiểm tra lại kết nối internet");
+                    return;
+                }
                 var token = (from w in Global.db_BPO.tbl_TokenLogins where w.Token==Global.StrUsername select w.Token).FirstOrDefault();
                 if (token == Global.Strtoken)
                 {
@@ -105,6 +114,11 @@ namespace ProjectManagement.MyForm
         {
             try
             {
+                if (!Global.db_BPO.DatabaseExists())
+                {
+                    MessageBox.Show("Không thể kết nối tới Server. Bạn vui lòng kiểm tra lại kết nối internet");
+                    return;
+                }
                 var token = (from w in Global.db_BPO.tbl_TokenLogins where w.Token == Global.StrUsername select w.Token).FirstOrDefault();
                 if (token == Global.Strtoken)
                 {
@@ -142,6 +156,11 @@ namespace ProjectManagement.MyForm
         {
             try
             {
+                if (!Global.db_BPO.DatabaseExists())
+                {
+                    MessageBox.Show("Không thể kết nối tới Server. Bạn vui lòng kiểm tra lại kết nối internet");
+                    return;
+                }
                 string username = gridView1.GetFocusedRowCellValue("Username") != null ? gridView1.GetFocusedRowCellValue("Username").ToString() : "";
                 //DialogResult thongbao = MessageBox.Show("You sure you want to delete UserName '" + username + "'", "Affirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 DialogResult thongbao = MessageBox.Show("Bạn muốn xóa thông tin UserName '" + username + "' ?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);

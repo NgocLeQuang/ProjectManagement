@@ -498,12 +498,6 @@
   <data name="gridColumn2.Caption" xml:space="preserve">
     <value>Password</value>
   </data>
-  <data name="gridColumn2.Visible" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="gridColumn2.VisibleIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
   <data name="gridColumn3.Caption" xml:space="preserve">
     <value>FullName</value>
   </data>
@@ -511,7 +505,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn3.VisibleIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="gridColumn4.Caption" xml:space="preserve">
     <value>IDRole</value>
@@ -520,7 +514,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn4.VisibleIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="gridColumn5.Caption" xml:space="preserve">
     <value>Group_Level</value>
@@ -529,7 +523,7 @@
     <value>True</value>
   </data>
   <data name="gridColumn5.VisibleIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="dgv_listuser.Size" type="System.Drawing.Size, System.Drawing">
     <value>956, 464</value>

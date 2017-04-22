@@ -315,4 +315,10 @@
       <Column Name="fDeadlineNotificationTime" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
     </ElementType>
   </Function>
+  <Function Name="dbo.GetList_Batch_BaoDeadline" Method="GetList_Batch_BaoDeadline">
+    <Parameter Name="fIdProject" Type="System.String" DbType="NVarChar(255)" />
+    <ElementType Name="GetList_Batch_BaoDeadlineResult">
+      <Column Name="fBatchName" Type="System.String" DbType="NVarChar(150) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
 </Database>

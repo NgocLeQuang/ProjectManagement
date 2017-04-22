@@ -367,6 +367,13 @@ namespace ProjectManagement
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), iDProject);
 			return ((ISingleResult<GetList_Batch_DeadlineResult>)(result.ReturnValue));
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetList_Batch_BaoDeadline")]
+		public ISingleResult<GetList_Batch_BaoDeadlineResult> GetList_Batch_BaoDeadline([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="NVarChar(255)")] string fIdProject)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), fIdProject);
+			return ((ISingleResult<GetList_Batch_BaoDeadlineResult>)(result.ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tbl_ChiNhanh")]
@@ -2665,6 +2672,32 @@ namespace ProjectManagement
 				if ((this._fDeadlineNotificationTime != value))
 				{
 					this._fDeadlineNotificationTime = value;
+				}
+			}
+		}
+	}
+	
+	public partial class GetList_Batch_BaoDeadlineResult
+	{
+		
+		private string _fBatchName;
+		
+		public GetList_Batch_BaoDeadlineResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fBatchName", DbType="NVarChar(150) NOT NULL", CanBeNull=false)]
+		public string fBatchName
+		{
+			get
+			{
+				return this._fBatchName;
+			}
+			set
+			{
+				if ((this._fBatchName != value))
+				{
+					this._fBatchName = value;
 				}
 			}
 		}

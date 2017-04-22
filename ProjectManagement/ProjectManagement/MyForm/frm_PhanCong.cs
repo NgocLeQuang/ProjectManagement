@@ -19,9 +19,10 @@ namespace ProjectManagement.MyForm
             ListIdproject = (from w in Global.db_BPO.CheckTimeDeadline() select w.fIDProject).ToList();
         }
         public static List<string> ListIdproject=new List<string>();
+        public static List<string> ListBatch=new List<string>();
         void grid_RowStyle(object sender, RowStyleEventArgs e)
         {
-            if (e.RowHandle >= 0)
+            ListIdproject = (from w in Global.db_BPO.CheckTimeDeadline() select w.fIDProject).ToList();if (e.RowHandle >= 0)
             {
                 string category = dgv_Duan.GetRowCellValue(e.RowHandle, "IDProject").ToString();
                 if (category.Any(s => ListIdproject.Contains(category)))
@@ -31,16 +32,34 @@ namespace ProjectManagement.MyForm
                 }
             }
         }
-        
+
+        void grid_RowStyle1(object sender, RowStyleEventArgs e)
+        {
+            if (e.RowHandle >= 0)
+            {
+                string category = dgv_batch.GetRowCellValue(e.RowHandle, "fBatchName").ToString();
+                if (category.Any(s => ListBatch.Contains(category)))
+                {
+                    e.Appearance.BackColor = Color.Salmon;
+                    e.Appearance.BackColor2 = Color.SeaShell;
+                }
+            }
+        }
         private void frm_PhanCong_Load(object sender, EventArgs e)
         {
             try
             {
+                if (!Global.db_BPO.DatabaseExists())
+                {
+                    MessageBox.Show("Không thể kết nối tới Server. Bạn vui lòng kiểm tra lại kết nối internet");
+                    return;
+                }
                 gridControl_duan.DataSource = Global.db_BPO.GetListProject();
                 gridControl_user.DataSource =Global.db_BPO.GetListUser_PhanCong(dgv_Duan.GetRowCellValue(dgv_Duan.FocusedRowHandle, "IDProject") != null? dgv_Duan.GetRowCellValue(dgv_Duan.FocusedRowHandle, "IDProject").ToString(): "");
                 groupControl2.Text = "Danh sách User tham gia dự án: " + dgv_Duan.GetRowCellValue(dgv_Duan.FocusedRowHandle, "MoTaChucNangMoi");
                 LoadDataCheckDeadline();
                 dgv_Duan.RowStyle += grid_RowStyle;
+                dgv_batch.RowStyle += grid_RowStyle1;
             }
             catch (Exception exception)
             {
@@ -76,6 +95,11 @@ namespace ProjectManagement.MyForm
         {
             try
             {
+                if (!Global.db_BPO.DatabaseExists())
+                {
+                    MessageBox.Show("Không thể kết nối tới Server. Bạn vui lòng kiểm tra lại kết nối internet");
+                    return;
+                }
                 if (e.Column.FieldName != "TrangThai" || e.RowHandle < 0) return;
                 bool check = (bool) e.Value;
                 if (check)
@@ -90,21 +114,40 @@ namespace ProjectManagement.MyForm
             catch{// ignored 
             }
         }
-
+        
         private void dgv_Duan_RowCellClick(object sender, RowCellClickEventArgs e)
         {
-            gridControl_user.DataSource = Global.db_BPO.GetListUser_PhanCong(dgv_Duan.GetRowCellValue(dgv_Duan.FocusedRowHandle, "IDProject") != null ? dgv_Duan.GetRowCellValue(dgv_Duan.FocusedRowHandle, "IDProject").ToString() : "");
+            if (!Global.db_BPO.DatabaseExists())
+            {
+                MessageBox.Show("Không thể kết nối tới Server. Bạn vui lòng kiểm tra lại kết nối internet");
+                return;
+            }
+            string idproject = dgv_Duan.GetRowCellValue(dgv_Duan.FocusedRowHandle, "IDProject") != null? dgv_Duan.GetRowCellValue(dgv_Duan.FocusedRowHandle, "IDProject").ToString(): "";
+
+            gridControl_user.DataSource = Global.db_BPO.GetListUser_PhanCong(idproject);
             groupControl2.Text = "Danh sách User tham gia dự án: "+dgv_Duan.GetRowCellValue(dgv_Duan.FocusedRowHandle, "MoTaChucNangMoi");
+            
+            ListBatch = (from w in Global.db_BPO.GetList_Batch_BaoDeadline(idproject) select w.fBatchName).ToList();
         }
 
         private void popup_listduan_Click(object sender, EventArgs e)
         {
+            if (!Global.db_BPO.DatabaseExists())
+            {
+                MessageBox.Show("Không thể kết nối tới Server. Bạn vui lòng kiểm tra lại kết nối internet");
+                return;
+            }
             string username = dgv_User.GetFocusedRowCellValue("Username").ToString();
             gridControl1.DataSource = Global.db_BPO.GetList_Project_UserPerform(username);
         }
 
         private void dgv_popup_RowCellClick(object sender, RowCellClickEventArgs e)
         {
+            if (!Global.db_BPO.DatabaseExists())
+            {
+                MessageBox.Show("Không thể kết nối tới Server. Bạn vui lòng kiểm tra lại kết nối internet");
+                return;
+            }
             string idproject = dgv_popup.GetRowCellValue(dgv_popup.FocusedRowHandle, "IDProject") != null? dgv_popup.GetRowCellValue(dgv_popup.FocusedRowHandle, "IDProject").ToString(): "";
             for (int i = 0; i < dgv_Duan.RowCount; i++)
             {
@@ -117,13 +160,13 @@ namespace ProjectManagement.MyForm
             gridControl_user.DataSource = Global.db_BPO.GetListUser_PhanCong(dgv_popup.GetRowCellValue(dgv_popup.FocusedRowHandle, "IDProject") != null ? dgv_popup.GetRowCellValue(dgv_popup.FocusedRowHandle, "IDProject").ToString() : "");
         }
 
-        private void btn_chitietdeadline_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Popup_Deadline_Batch_Click(object sender, EventArgs e)
         {
+            if (!Global.db_BPO.DatabaseExists())
+            {
+                MessageBox.Show("Không thể kết nối tới Server. Bạn vui lòng kiểm tra lại kết nối internet");
+                return;
+            }
             string idproject = dgv_Duan.GetFocusedRowCellValue("IDProject").ToString();
             gridControl2.DataSource = Global.db_BPO.GetList_Batch_Deadline(idproject);
         }

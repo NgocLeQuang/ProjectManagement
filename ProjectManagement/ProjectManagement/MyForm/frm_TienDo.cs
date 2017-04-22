@@ -23,18 +23,25 @@ namespace ProjectManagement.MyForm
         {
             btn_ChiTiet.Visible = false;
             radioGroup1.Visible = false;
+            if (!Global.db_BPO.DatabaseExists())
+            {
+                MessageBox.Show("Không thể kết nối tới Server. Bạn vui lòng kiểm tra lại kết nối internet");
+            }
+            else
+            {
+                var idproject = (from w in Global.db_BPO.tbl_Versions orderby w.IDProject select new { w.IDProject }).ToList();
+                cbb_project.Properties.DataSource = idproject;
+                cbb_project.Properties.DisplayMember = "IDProject";
+                cbb_project.Properties.ValueMember = "IDProject";
+                cbb_project.ItemIndex = 0;
 
-            var idproject = (from w in Global.db_BPO.tbl_Versions orderby w.IDProject select new { w.IDProject }).ToList();
-            cbb_project.Properties.DataSource = idproject;
-            cbb_project.Properties.DisplayMember = "IDProject";
-            cbb_project.Properties.ValueMember = "IDProject";
-            cbb_project.ItemIndex = 0;
-
-            var fBatchName = (from w in Global.db_BPO.tbl_TienDos where w.IDProject==cbb_project.Text  orderby w.id group w by w.fBatchName into g select new { fBatchName=g.Key }).ToList();
-            cbb_Batch.Properties.DataSource = fBatchName;
-            cbb_Batch.Properties.DisplayMember = "fBatchName";
-            cbb_Batch.Properties.ValueMember = "fBatchName";
-            cbb_Batch.ItemIndex = 0;
+                var fBatchName = (from w in Global.db_BPO.tbl_TienDos where w.IDProject == cbb_project.Text orderby w.id group w by w.fBatchName into g select new { fBatchName = g.Key }).ToList();
+                cbb_Batch.Properties.DataSource = fBatchName;
+                cbb_Batch.Properties.DisplayMember = "fBatchName";
+                cbb_Batch.Properties.ValueMember = "fBatchName";
+                cbb_Batch.ItemIndex = 0;
+            }
+            
             if (cbb_Batch.Text == "Không có batch")
             {
                 btn_ChiTiet.Visible = false;
@@ -50,6 +57,11 @@ namespace ProjectManagement.MyForm
         {
             try
             {
+                if (!Global.db_BPO.DatabaseExists())
+                {
+                    MessageBox.Show("Không thể kết nối tới Server. Bạn vui lòng kiểm tra lại kết nối internet");
+                    return;
+                }
                 if (radioGroup1.Properties.Items[radioGroup1.SelectedIndex].Value == "DESO")
                 {
                     chartControl1.DataSource = null;
@@ -113,11 +125,17 @@ namespace ProjectManagement.MyForm
 
         private void cbb_project_EditValueChanged(object sender, EventArgs e)
         {
+            if (!Global.db_BPO.DatabaseExists())
+            {
+                MessageBox.Show("Không thể kết nối tới Server. Bạn vui lòng kiểm tra lại kết nối internet");
+                return;
+            }
             var fBatchName = (from w in Global.db_BPO.tbl_TienDos where w.IDProject == cbb_project.Text orderby w.id group w by w.fBatchName into g select new { fBatchName = g.Key }).ToList();
             cbb_Batch.Properties.DataSource = fBatchName;
             cbb_Batch.Properties.DisplayMember = "fBatchName";
             cbb_Batch.Properties.ValueMember = "fBatchName";
-            cbb_Batch.ItemIndex = 0;ThongKe();
+            cbb_Batch.ItemIndex = 0;
+            ThongKe();
         }
     }
 }

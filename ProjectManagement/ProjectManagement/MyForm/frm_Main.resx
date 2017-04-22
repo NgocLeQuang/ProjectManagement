@@ -662,4 +662,52 @@
   <metadata name="documentManager1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>157, 18</value>
   </metadata>
+  <metadata name="contextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>319, 18</value>
+  </metadata>
+  <metadata name="notifyIcon1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>474, 18</value>
+  </metadata>
+  <data name="notifyIcon1.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAICAAAAEACACoCAAAFgAAACgAAAAgAAAAQAAAAAEACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAACAAACAAAAAgIAAgAAAAIAAgACAgAAAgICAAMDcwADwyqYAqj8qAP8/KgAAXyoAVV8qAKpf
+        KgD/XyoAAH8qAFV/KgCqfyoA/38qAACfKgBVnyoAqp8qAP+fKgAAvyoAVb8qAKq/KgD/vyoAAN8qAFXf
+        KgCq3yoA/98qAAD/KgBV/yoAqv8qAP//KgAAAFUAVQBVAKoAVQD/AFUAAB9VAFUfVQCqH1UA/x9VAAA/
+        VQBVP1UAqj9VAP8/VQAAX1UAVV9VAKpfVQD/X1UAAH9VAFV/VQCqf1UA/39VAACfVQBVn1UAqp9VAP+f
+        VQAAv1UAVb9VAKq/VQD/v1UAAN9VAFXfVQCq31UA/99VAAD/VQBV/1UAqv9VAP//VQAAAH8AVQB/AKoA
+        fwD/AH8AAB9/AFUffwCqH38A/x9/AAA/fwBVP38Aqj9/AP8/fwAAX38AVV9/AKpffwD/X38AAH9/AFV/
+        fwCqf38A/39/AACffwBVn38Aqp9/AP+ffwAAv38AVb9/AKq/fwD/v38AAN9/AFXffwCq338A/99/AAD/
+        fwBV/38Aqv9/AP//fwAAAKoAVQCqAKoAqgD/AKoAAB+qAFUfqgCqH6oA/x+qAAA/qgBVP6oAqj+qAP8/
+        qgAAX6oAVV+qAKpfqgD/X6oAAH+qAFV/qgCqf6oA/3+qAACfqgBVn6oAqp+qAP+fqgAAv6oAVb+qAKq/
+        qgD/v6oAAN+qAFXfqgCq36oA/9+qAAD/qgBV/6oAqv+qAP//qgAAANQAVQDUAKoA1AD/ANQAAB/UAFUf
+        1ACqH9QA/x/UAAA/1ABVP9QAqj/UAP8/1AAAX9QAVV/UAKpf1AD/X9QAAH/UAFV/1ACqf9QA/3/UAACf
+        1ABVn9QAqp/UAP+f1AAAv9QAVb/UAKq/1AD/v9QAAN/UAFXf1ACq39QA/9/UAAD/1ABV/9QAqv/UAP//
+        1ABVAP8AqgD/AAAf/wBVH/8Aqh//AP8f/wAAP/8AVT//AKo//wD/P/8AAF//AFVf/wCqX/8A/1//AAB/
+        /wBVf/8Aqn//AP9//wAAn/8AVZ//AKqf/wD/n/8AAL//AFW//wCqv/8A/7//AADf/wBV3/8Aqt//AP/f
+        /wBV//8Aqv//AP/MzAD/zP8A//8zAP//ZgD//5kA///MAAB/AABVfwAAqn8AAP9/AAAAnwAAVZ8AAKqf
+        AAD/nwAAAL8AAFW/AACqvwAA/78AAADfAABV3wAAqt8AAP/fAABV/wAAqv8AAAAAKgBVACoAqgAqAP8A
+        KgAAHyoAVR8qAKofKgD/HyoAAD8qAFU/KgDw+/8ApKCgAICAgAAAAP8AAP8AAAD//wD/AAAAAAAAAP//
+        AAD///8A/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39
+        /f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f318AAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAADx/f39/Vr2CAgICAgICIIICYaGhgmChoYJgoaChoKGXvX9/f39gtP29vbT9vavXvaz
+        /7PRs/avr/av9q+vr6+D9f39/f1e9nnTWlr206+C/4c39l5aWl72r6+vr1oHr4IN/f39/ff29vb29vb2
+        r4b/9v//0f+z0a+v9q/2r7OvhvX9/f39XvZ59l4H9tOvXv+KOf9eXlr2//az0bNaWq+C9f39/f339vb2
+        9vb29q+C//b///////az0f/2r/av9gn1/f39/V72efZeWvb2r4b/ijn/XlpaNlr2s9H/WlqvgvX9/f39
+        9//29vb29vavgv///////////////7P2s/YJ9f39/f1e9vb2eQheWq+G/4pd/15eWlr/////9lpa/4b1
+        /f39/ff/9vb2//b2r4L///////////////////bRCPX9/f39Xv//9nkIWlqvhv+HO/9eWl7///////9a
+        Nv8J9f39/f33////9v//9q+C//////////b//////////6r1/f39/V7///95CF5ar4b/hzf/Xl5aWlr/
+        ////Wlr2CfX9/f399//2//////avgv////////////////////8I9f39/f1e/3n/Wlr//6+G/4c7/15e
+        Wlr//////1pa/wj1/f39/ff/////////r4L/////////////////////CPX9/f39XqqqqqqqCKoIqgiq
+        CKqqqqqqhqoIqqqqhqqq9f39/f1e9oKG9veq9veq9qr39gj39vb29tD2CPb29vb1/f39/ff2Ear2EdAI
+        NQjQCVquCVrQCNAI9q72rtAI9vX9/f39XvYI9q/Qr/bR9q/2r/av9q/2r/av9q/2r/av9f39/f1fWl9a
+        Njc2Dg4ODg4ODg4ODg4ODg4ODg4ODg4O/f39/TaHY4djh4djCV9jX19fX187XztfOzs3O1s7Nw79/f39
+        XwmHh4djX4dfY2NfY19fX19fX19bXztfO187Dv39/f1aY4djCWOHY4dfX19fX19fO187Ozs7Nzs3OzcP
+        /f39/V9aX1o3NjcODg8ODg4ODw4ODg4PDg4ODg8ODg79/f39/f39/f39/f39/f39/f39/f39/f39/f39
+        /f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39/f39
+        /f39/f39/f39/f///////////////8AAAAPAAAADwAAAA8AAAAPAAAADwAAAA8AAAAPAAAADwAAAA8AA
+        AAPAAAADwAAAA8AAAAPAAAADwAAAA8AAAAPAAAADwAAAA8AAAAPAAAADwAAAA8AAAAPAAAADwAAAA8AA
+        AAPAAAAD////////////////
+</value>
+  </data>
 </root>

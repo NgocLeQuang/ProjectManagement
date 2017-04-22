@@ -21,6 +21,11 @@ namespace ProjectManagement.MyForm
 
         private void frm_ChiTietTienDo_Load(object sender, EventArgs e)
         {
+            if (!Global.db_BPO.DatabaseExists())
+            {
+                MessageBox.Show("Không thể kết nối tới Server. Bạn vui lòng kiểm tra lại kết nối internet");
+                return;
+            }
             lb_TongSoHinh.Text =(from w in Global.db_BPO.tbl_TienDos where w.fBatchName == lb_fBatchName.Text && w.IDProject==lb_duan.Text select w.Idimage).Count().ToString();
             if (Loai=="DESO")
             {
@@ -88,6 +93,11 @@ namespace ProjectManagement.MyForm
 
         private void repositoryItemPopupContainerEdit1_Click(object sender, EventArgs e)
         {
+            if (!Global.db_BPO.DatabaseExists())
+            {
+                MessageBox.Show("Không thể kết nối tới Server. Bạn vui lòng kiểm tra lại kết nối internet");
+                return;
+            }
             string idimage = gridView1.GetFocusedRowCellValue("idimage").ToString();
             gridControl2.DataSource = null;
             if (Loai == "DESO")
